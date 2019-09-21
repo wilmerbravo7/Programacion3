@@ -28,8 +28,8 @@ public class Main1 {
 		Location c3 = new Location(c2);
 		Location c4 = new Location(world,-5.0, -5.0, -5.0);
 		//Codigo creado por mi para comprobar cosas.
-		Location c5 = new Location(world,7.0,-2.0,7.0);
-		Location c6 = new Location(world,14.0,260,14.0);
+		//Location c5 = new Location(world,7.0,-2.0,7.0);
+		//Location c6 = new Location(world,14.0,260,14.0);
 
 		// Comprueba cómo las siguientes sentencias invocan al método toString() de la clase Location
 		System.out.println(c1);
@@ -37,13 +37,14 @@ public class Main1 {
 		System.out.println(c3);
 		System.out.println(c4);
 		//codigo de prueba
+		/*
 		System.out.println("---------------");
 		System.out.println(c5);
 		System.out.println("---------------");
 		System.out.println("---------------");
 		System.out.println(c6);
 		System.out.println("---------------");
-
+			*/
 		c2.add(c3).add(c3);
 		System.out.println(c2);
 		c2.substract(c3).substract(c3);
