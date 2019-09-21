@@ -146,7 +146,15 @@ public class Location_PreP1Test {
     // TODO
     @Test
     public final void testCopyConstructor() {
-    	fail("test the copy constructor");
+    	Location ly;
+    	ly = new Location(earth,-15.7,-16.8,-18.9);
+    	assertSame("getWorld", earth, ly.getWorld());
+    	assertEquals("getX", -15.7, ly.getX(),0.01);
+    	assertEquals("getY",0.0, ly.getY(),0.01);
+    	assertEquals("getZ",-18.9, ly.getZ(),0.01);
+    	
+    	//fail("test the copy constructor");
+    	//Constructor de copia hecho. Modificado correctamente
     }
 
     /**
