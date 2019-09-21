@@ -187,7 +187,15 @@ public class Location_PreP1Test {
     // TODO
     @Test
     public final void testAdd_Y_OutOfRange() {
-        fail("Test adding 'le' to location [3.3,Location.UPPER_Y_VALUE,1.1] in the same world");    	
+    	
+    	Location lup = new Location(earth, 3.3,Location.UPPER_Y_VALUE,1.1);
+    	le.add(lup);
+    	assertSame("getWorld", earth, le.getWorld());
+        assertEquals("getX", 4.4, le.getX(),0.01); 
+        assertEquals("getY", 0.0, le.getY(),0.01);
+        assertEquals("getZ", 4.4, le.getZ(),0.01);
+    	
+        //fail("Test adding 'le' to location [3.3,Location.UPPER_Y_VALUE,1.1] in the same world");    	
     }
      
     /**
@@ -231,7 +239,16 @@ public class Location_PreP1Test {
     // TODO
     @Test
     public final void testMultiply_Y_OutOfRange() {
-    	fail("Test multiplying object 'le' by UPPER_Y_VALUE");    	
+    	
+    	le.multiply(255.0);
+    	assertSame("getWorld", earth, le.getWorld());
+    	assertEquals("getX",280.5, le.getX(),0.01);
+    	assertEquals("getY",0.0, le.getY(),0.01);
+    	assertEquals("getZ",841.5, le.getZ(),0.01);
+    	
+    	
+    	//fail("Test multiplying object 'le' by UPPER_Y_VALUE");  
+    	//Modificado correctamente
     }
     
     /**
@@ -275,6 +292,7 @@ public class Location_PreP1Test {
 
     	
         //fail("test: le - le == (0,0,0)");
+    	//Modificado correctamente
     }
 
     /**
@@ -310,6 +328,7 @@ public class Location_PreP1Test {
     	assertEquals("toString", "Location{world=Earth,x=1.1,y=2.2,z=3.3}", le.toString());
     	assertEquals("toString", "Location{world=Mars,x=10.01,y=20.02,z=30.03}", lm.toString());
         //fail("test the toString() method when applied to a null world location");
+    	//Modificado correctamente
  	}
 
 	@Test
