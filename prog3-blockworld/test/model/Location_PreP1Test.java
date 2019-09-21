@@ -265,7 +265,16 @@ public class Location_PreP1Test {
     // TODO
     @Test
     public final void testSubstractSameLocation() {
-        fail("test: le - le == (0,0,0)");
+    	
+    	Location led = new Location(earth,1.1,2.2,3.3);
+    	le.substract(led);
+    	assertSame("getWorld",earth , le.getWorld());
+    	assertEquals("getX", 0.0, le.getX(),0.01);
+    	assertEquals("getY", 0.0, le.getY(),0.01);
+    	assertEquals("getZ", 0.0, le.getZ(),0.01);
+
+    	
+        //fail("test: le - le == (0,0,0)");
     }
 
     /**
@@ -298,8 +307,8 @@ public class Location_PreP1Test {
     // TODO
     @Test
     public final void testToStringNullWorld() {
-    	assertEquals("toString", "Cannot add Locations of differing worlds", le.toString());
-    	assertEquals("toString", "Cannot add Locations of differing worlds", lm.toString());
+    	assertEquals("toString", "Location{world=Earth,x=1.1,y=2.2,z=3.3}", le.toString());
+    	assertEquals("toString", "Location{world=Mars,x=10.01,y=20.02,z=30.03}", lm.toString());
         //fail("test the toString() method when applied to a null world location");
  	}
 
